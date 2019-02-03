@@ -1,0 +1,42 @@
+html {
+    margin: 0 auto;
+}
+
+
+body {
+   margin: 0px;
+    background-color: #6FB1EB;
+    font-family: 'Merriweather', serif;
+}
+header img#headerimg {
+max-width: 75px;
+height: auto;
+}
+
+header{
+    background-color: #deeaff;
+    text-align: center;
+}
+
+
+header .headerTitle, .motto, #headerimage {
+    vertical-align: middle;
+    display:inline-block;
+}
+
+/* Navigation  */
+nav{
+    text-align: center;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    
+}
+#townHeader {
+    text-align: center;
+}

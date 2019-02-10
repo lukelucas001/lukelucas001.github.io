@@ -7,48 +7,89 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <link rel="stylesheet" href="css/small-4.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small-5.css">
+    <link rel="stylesheet" href="css/large-5.css">
 </head>
 
 <body>
     <header>
-        <img src="images/sunimage.png" alt="Sun Logo" id="headerimg">
-        <h1 class="headerTitle">Town of Weather</h1>
-        <div class="motto">
-            <h3>Weather for all Occasions</h3>
+        <div class="headerContent">
+            <div id="sunImage">
+                <img src="images/sunimage.png" alt="Sun Logo" id="headerimg">
+            </div>
+            <div>
+                <h1 class="headerTitle">Town of Weather</h1>
+                <div class="motto">
+                    <h3>Weather for all Occasions</h3>
+                </div>
+            </div>
+            <div id="weatherConditions">
+                <p>Weather<br>Conditions</p>
+            </div>
         </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Preston</a></li>
-            <li><a href="#">Soda Springs</a></li>
-            <li><a href="#">Fish Haven</a></li>
-            <li><a href="#">Storm Center</a></li>
-            <li><a href="#">Gallery</a></li>
-        </ul>
+        <div class="topnav" id="myTopnav">
+            <a id="menu" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i> Menu
+            </a>
+            <a href="#">Preston</a>
+            <a href="#">Soda Springs</a>
+            <a href="#">Fish Haven</a>
+            <a href="#">Storm Center</a>
+            <a href="#">Gallery</a>
+        </div>
+
     </nav>
+
     <main>
         <h1 id="townHeader">Preston</h1>
         <div class="weatherSummary">
-            <img src="#" alt="Placeholder Image">
-            <section>
-                <h3>Weather Summary</h3>
-            </section>
+            <h3>Weather Summary</h3>
+            <div class="herodiv">
+
+            </div>
+                <img src="images/aspen-trees.jpg" alt="Fields of Aspen Threes">
+                <section class="weatherValues">
+                    <p>Currently: <span id="value1">
+                        Value
+                    </span</p>
+                    <p>High: <span id="value2">Value</span></p>
+                    <p>Wind Chill: <span id="value3">Value</span></p>
+                    <p>Humidity: <span id="value4">Value</span></p>
+                    <p>Wind Speed: <span id="value5">Value</span></p>
+                </section>
         </div>
         <article>
             <h2>Article Title</h2>
-    <h3 id="authorHeader">by author</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi quod error nostrum repellat deleniti
+            <h3 id="authorHeader">by author</h3>
+            <section class="articleContent">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi quod error nostrum repellat deleniti
                 fugit debitis quibusdam laudantium fuga, illo dolore accusamus inventore totam quidem numquam impedit
                 soluta voluptas cupiditate?</p>
-            <img src="#" alt="Placeholder Image">
+                <img src="images/fall-mountain.jpg" alt="Fall Mountain with Early Snowfall" id="fall-mountain">
+            </section>
         </article>
     </main>
     <footer>
         <p></p>
     </footer>
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            }
+            else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

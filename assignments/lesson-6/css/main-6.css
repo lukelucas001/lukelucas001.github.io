@@ -1,0 +1,82 @@
+html {
+    margin: 0 auto;
+}
+
+
+body {
+    margin: 0px;
+    background-color: #6FB1EB;
+    font-family: 'Merriweather', serif;
+}
+
+main {
+    margin: 15px;
+}
+
+h2,
+h3 {
+    margin: auto 0px;
+    padding: auto 0px;
+}
+
+article {
+    background-color: #deeaff;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+header {
+    background-color: #deeaff;
+    text-align: center;
+}
+
+header img#headerimg {
+    max-width: 75px;
+    height: auto;
+}
+
+#sunPicture {
+    font-size: 3.5em;
+}
+
+header .headerTitle,
+.motto,
+#headerimage {
+    vertical-align: middle;
+}
+
+.motto {
+    font-style: italic;
+    font-size: .9em;
+}
+
+.headerTitle {
+    margin-bottom: 1%;
+}
+
+.weatherSummary {
+    margin-bottom: 5%;
+}
+
+#townHeader {
+    text-align: center;
+}
+
+#authorHeader {
+    font-size: 1em;
+    margin-left: 4%;
+}
+
+#weatherConditions {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+

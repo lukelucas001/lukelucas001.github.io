@@ -1,0 +1,116 @@
+@media  only screen and (min-width: 600px){
+    .headerContent {
+        display: inline-block;
+    }
+    #weatherConditions{
+        display: inline-block;
+        }
+    
+    .headerContent{
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+    }
+    #sunImage {
+        align-self: center;
+        Margin-right: 4%;
+    }
+    
+    #weatherConditions {
+        display: flex;
+        align-self: center;
+        margin-left: 4%;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0px 8px;
+    }
+    #menu:hover {
+        cursor: pointer;
+    }
+    
+    main img {
+        max-width: 100%;
+        height: auto;
+        align-content: center;
+    }
+    
+    
+    img#fall-mountain{
+    max-height: 200px;
+    }
+    
+    main section.articleContent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    main {
+        max-width:820px;
+        margin:0 auto;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size:2rem;
+        text-shadow:3px 3px 5px #777;
+    }
+    
+    .weatherSummary {
+        display: block;
+    }
+    
+    .herodiv {
+        margin: 10px auto;
+        position: relative;
+    }
+    
+    .skyImage {
+        position: ;
+    }
+    
+    .weatherValues{
+        position: absolute;
+        background: radial-gradient(#eee, rgba(69, 103, 170, .75));
+        border: 1px solid #365594bf;
+        padding: 1.5rem;
+        box-shadow: 0 0 30px #fff;
+    }
+
+    footer{
+        text-align: center;
+        height: 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .topnav {
+        overflow: hidden;
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        padding: .5% .5%;
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color: lightblue;
+        text-align: center;
+        color: black;
+    }
+
+    .topnav a {
+        text-decoration: none;
+    }
+
+    .hiddenDiv {
+        display: block;
+    }
+}
+   

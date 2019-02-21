@@ -1,11 +1,17 @@
+$(document).ready(function() {
+    $("#menu").on("click", expandMenu);
+});
 
-        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            }
-            else {
-                x.className = "topnav";
-            }
-        }
+
+function expandMenu() {
+    if ($("#menu").hasClass("expand")) {
+        $(".menuLinks").removeClass("hiddenLink");
+        $("#menu").removeClass("expand");
+    }
+    else {
+        $(".menuLinks").addClass("hiddenLink");
+        $("#menu").addClass("expand");
+    }
+}
+
+

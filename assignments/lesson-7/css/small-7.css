@@ -23,8 +23,11 @@
         padding: 1.5rem;
         box-shadow: 0 0 30px #fff;
     }
-
-
+/* Weather Conditions in Top right when in large */
+    #weatherConditions{
+        display: none;
+    }
+    
     /* Navigation  */
     nav {
         text-align: center;

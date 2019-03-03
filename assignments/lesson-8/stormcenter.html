@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Storm Center</title>
+    <meta name="description" content="Storm Center, Weather webpage">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/general-main.css">
+    <link rel="stylesheet" href="css/general-small.css">
+    <link rel="stylesheet" href="css/general-large.css">
+    <link rel="stylesheet" href="css/preston-small-6.css">
+    <link rel="stylesheet" href="css/preston-large-6.css">
+    <link rel="stylesheet" href="css/preston-main.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="headerContent">
+            <div id="sunImage">
+                <img src="images/sunimage.png" alt="Sun Logo" id="headerimg">
+            </div>
+            <div>
+                <h1 class="headerTitle">Town of Weather</h1>
+                <div class="motto">
+                    <h3>Weather for all Occasions</h3>
+                </div>
+            </div>
+            <div id="weatherConditions">
+                <p>Weather<br>Conditions</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+            <div class="topnav" id="myTopnav">
+                  <a id="menu" class="icon expand">
+                <i class="fa fa-bars"></i> Menu
+            </a>
+                  <a class="menuLinks hiddenLink" href="preston-8.html">Preston</a>
+                  <a class="menuLinks hiddenLink" href="#">Soda Springs</a>
+                  <a class="menuLinks hiddenLink" href="#">Fish Haven</a>
+                  <a class="menuLinks hiddenLink" href="stormcenter.html">Storm Center</a>
+                  <a class="menuLinks hiddenLink" href="gallery-8.html">Gallery</a>
+            </div>
+      </nav>
+    <body>
+        <h1>
+            Storm Center
+        </h1>
+        <style>
+            form {
+                text-align: center;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <form action="#" style="center">
+            <div>
+                First name:
+                <br>
+                <input type="text" name="firstname" pattern="[A-Za-z]{5}" required>
+                <br>
+                <br>
+                Last name:
+                <br>
+                <input type="text" name="lastname" pattern="[A-Za-z]{5}" required>
+                <br>
+                <br>
+                Email:
+                <br>
+                <input type="email" placeholder="place123@email.com" required>
+                </br>
+                <br>
+                Phone Number:
+                <br>
+                <input type="tel" required>
+                </br>
+                <br>
+                Zip Code:
+                <br>
+                <input type="number" maxlength="6" required>
+                <br>
+                <br>
+                Storm Date:
+                <br>
+                <input type="date" required>
+                <br>
+                <br>
+                Storm Type:
+                <br>
+                <input list="stormTypes">
+                <datalist id="stormTypes">
+                    <option value="Flash Flood">Flash Flood</option>
+                    <option value="Hail">Hail</option>
+                    <option value="Hurricane">Hurricane</option>
+                    <option value="Thunderstorm">Thunderstorm</option>
+                    <option value="Tornado">Tornado</option>
+                </datalist>
+                <br>
+                <br>
+                Storm rating:
+                <br>
+                <input type="range" id="rating" value="" min="1" max="10" step="1">
+                <br>
+                <br>
+                Storm Region:
+                <br>
+                <select name="stormegion">
+                    <option value="selectionRegion ..." disabled>Select Region ...</option>
+                    <option value="preston">Preston</option>
+                    <option value="sodaSprings">Soda Springs</option>
+                    <option value="fishHaven">Fish Haven</option>
+                </select>
+                <br>
+                <br>
+                User In-Danger Level:
+                <div>
+                    <input type="radio" id="yes" name="yes" value="yes" checked>
+                    <label for="yes">Yes</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="maybe" name="maybe" value="maybe">
+                    <label for="dewey">Maybe</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="no" name="no" value="no">
+                    <label for="no">No</label>
+                </div>
+
+                <br>
+                <input type="textarea">
+                <br>
+                <br>
+                <br>
+                <button type="submit">
+                    <i class='icon-save'></i> Save
+                </button>
+                <div>
+
+
+        </form>
+    </body>
+<footer>
+    
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="scripts/currentdate.js"></script>
+      <script src="scripts/hamburger.js"></script>
+</html>

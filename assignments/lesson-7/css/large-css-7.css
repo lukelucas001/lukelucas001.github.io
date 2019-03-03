@@ -1,64 +1,73 @@
-@media screen and (min-width:061) {
-#container {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  /*grid-template-rows: repeat(10, 1fr);*/
-  
-  /*THIS ONE SETS A HEIGHT OF EACH FRAME/ROW TO 100PX*/
-  /*grid-template-rows: repeat(10, 100px);*/
-  
-  /*THIS ONE SETS A HEIGHT TO A MINIMUM OF 45PX*/
-  /*AND THE MAX HEIGHT IS AUTO SO IT WILL FIT THE SIZE*/
-  /*OF THE CONTENT INSIDE*/
-  /*THIS IS BETTER BECUASE BY DEFAULT THE FRAMES ARE*/
-  /*THE SIZE OF THE CONTENT YOU HAVE IN THEM. SO IF YOU */
-  /*DO NOT HAVE ANY CONTENT THAN IT WILL LOOK REALLY SMALL*/
-  /*OR IF YOUR CONTENT IS TOO BIG IT MIGHT GET CUT OFF.*/
-  /*SO USING MINMAX IS SOMETIMES PREFERRED*/
-  grid-template-rows: repeat(10, minmax(45px, auto));
-}
-
-header {
-  grid-column: 1 / 11;
-  grid-row: 1 / 2;
-}
-
-aside {
-  grid-column: 1 / 4;
-  grid-row: 2 / 9;
-}
-
-main {
-  grid-column: 4 / 11;
-  grid-row: 2 / 9;
-}
-
-footer {
-  grid-column: 1 / 11;
-  grid-row: 9 / 11;
-}
-
-.border {
-  border: 2px solid black;
-}
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+@media only screen and (min-width: 600px) {
+  /*GENERAL HEADER CSS*/
+  .headerContent {
+        display: inline-block;
   }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+  .headerContent {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1%;
+        padding-top: 1%;
   }
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
+  #sunImage {
+        align-self: center;
+        Margin-right: 4%;
   }
-  main img {
-    max-width: 100px;
-    height: auto;
+  #weatherConditions {
+        display: flex;
+        align-self: center;
+        margin-left: 4%;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0px 8px;
+  }
+
+  /*NAV MENU CSS*/
+  h2 {
+        text-align: center;
+        font-size: 2rem;
+        text-shadow: 3px 3px 5px #777;
+  }
+
+  /* Navigation  */
+  #menu:hover {
+        cursor: pointer;
+  }
+
+  nav {
+        background-color: lightblue;
+  }
+
+  #menu {
+        display: none;
+  }
+
+  .topnav {
+        overflow: hidden;
+        white-space: nowrap;
+  }
+
+  .topnav {
+        height: 100%;
+        padding: 10px 0px;
+        text-align: center;
+        color: black;
+  }
+
+  .topnav a {
+        white-space: nowrap;
+        color: black;
+        text-decoration: none;
+        padding: 0px 1.5%
+  }
+
+  .hiddenDiv {
+        display: block;
+  }
+
+  footer {
+        margin: 10px 10px;
   }
 }

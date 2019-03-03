@@ -1,0 +1,73 @@
+@media only screen and (min-width: 600px) {
+      /*GENERAL HEADER CSS*/
+      .headerContent {
+            display: inline-block;
+      }
+      .headerContent {
+            display: inline-flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 1%;
+            padding-top: 1%;
+      }
+      #sunImage {
+            align-self: center;
+            Margin-right: 4%;
+      }
+      #weatherConditions {
+            display: flex;
+            align-self: center;
+            margin-left: 4%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0px 8px;
+      }
+
+      /*NAV MENU CSS*/
+      h2 {
+            text-align: center;
+            font-size: 2rem;
+            text-shadow: 3px 3px 5px #777;
+      }
+
+      /* Navigation  */
+      #menu:hover {
+            cursor: pointer;
+      }
+
+      nav {
+            background-color: lightblue;
+      }
+
+      #menu {
+            display: none;
+      }
+
+      .topnav {
+            overflow: hidden;
+            white-space: nowrap;
+      }
+
+      .topnav {
+            height: 100%;
+            padding: 10px 0px;
+            text-align: center;
+            color: black;
+      }
+
+      .topnav a {
+            white-space: nowrap;
+            color: black;
+            text-decoration: none;
+            padding: 0px 1.5%
+      }
+
+      .hiddenDiv {
+            display: block;
+      }
+
+      footer {
+            margin: 10px 10px;
+      }
+}

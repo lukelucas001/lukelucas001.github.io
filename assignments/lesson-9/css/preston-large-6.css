@@ -1,0 +1,157 @@
+@media only screen and (min-width: 600px) {
+    .headerContent {
+        display: inline-block;
+    }
+
+    .headerContent {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+    }
+    
+    #sunImage {
+        align-self: center;
+        Margin-right: 4%;
+    }
+
+    #weatherConditions {
+        display: flex;
+        align-self: center;
+        margin-left: 4%;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0px 8px;
+    }
+
+    #menu:hover {
+        cursor: pointer;
+    }
+
+    main img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    img#fall-mountain {
+        max-height: 200px;
+    }
+
+    main section.articleContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        text-shadow: 3px 3px 5px #777;
+    }
+
+    .weatherSummary {
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+
+    .herodiv {
+        margin: 10px auto;
+        position: relative;
+        height: 100%;
+    }
+
+    .skyImage {
+        position: absolute;
+    }
+
+    .weatherValues {
+        width: 180px;
+        height: 200px;
+        position: absolute;
+        background: radial-gradient(#eee, rgba(69, 103, 170, .75));
+        border: 1px solid #365594;
+        padding: 1.5rem;
+        box-shadow: 0 0 30px #fff;
+        top: 40px;
+        left: 100px;
+    }
+
+    #forcastTable {
+        display: flex;
+        margin: 10px 0px 50px 0px;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #forcastTable table {
+        border-collapse: collapse;
+    }
+
+    #forcastTable table,
+    #forcastTable th,
+    #forcastTable td {
+        border: 1px solid black;
+    }
+
+    #forcastTable th {
+        padding: 15px;
+        background-color: white;
+    }
+
+    #forcastTable td {
+        padding-top: 6px;
+        text-align: center;
+        background-color: white;
+    }
+
+    .forcastIcon {
+        font-size: 1.5em;
+    }
+
+
+    /* Navigation  */
+    nav {
+        background-color: lightblue;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .topnav {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .topnav {
+        height: 100%;
+        padding: 10px 0px;
+        text-align: center;
+        color: black;
+    }
+
+    .topnav a {
+        white-space: nowrap;
+        color: black;
+        text-decoration: none;
+        padding: 0px 1.5%
+    }
+
+    .hiddenDiv {
+        display: block;
+    }
+
+    footer {
+        margin: 10px 10px;
+    }
+
+}

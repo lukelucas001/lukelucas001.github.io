@@ -47,7 +47,53 @@
             </div>
       </nav>
       <main>
-         
+            <div class="row">
+                    <div class="column">
+                        <p>
+                            <b>Preston</b>
+                            <br>
+                            <b>Motto:</b><span id="prestonMotto"></span>
+                            <br>
+                            <b>Year Founded:</b><span id="prestonYearFound"></span>
+                            <br>
+                            <b>Population:</b><span id="prestonPopulation"></span>
+                            <br>
+                            <b>Annual Rainfall:</b><span id="prestonRainFall"></span>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p>
+                                <b>Soada Springs</b>
+                                <br>
+                                <b>Motto:</b><span id="sodaSpringsMotto"></span>
+                                <br>
+                                <b>Year Founded:</b><span id="sodaSpringsYearFound"></span>
+                                <br>
+                                <b>Population:</b><span id="sodaSpringsPopulation"></span>
+                                <br>
+                                <b>Annual Rainfall:</b><span id="sodaSpringsRainFall"></span>
+                            </p>
+                    </div>
+                    <div class="column">
+                        <p>
+                                <b>Fish Haven</b>
+                                <br>
+                                <b>Motto:</b><span id="fishHavenMotto"></span>
+                                <br>
+                                <b>Year Founded:</b><span id="fishHavenYearFound"></span>
+                                <br>
+                                <b>Population:</b><span id="fishHavenPopulation"></span>
+                                <br>
+                                <b>Annual Rainfall:</b><span id="fishHavenainFall"></span>
+                            </p>
+                    </div>
+                    <div class="column">
+                        <p><b>Weather</b></p>
+                        <div id="weather data">
+            
+                        </div>
+                    </div>
+                </div>
       </main>
       <footer>
             <span id="currentDate"></span>
@@ -57,97 +103,75 @@
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script src="scripts/currentdate.js"></script>
       <script src="scripts/hamburger.js"></script>
-      <script>
-      {
-  "towns" : [
-  {
-    "name": "Franklin",
-    "motto": "Where you will grow!",
-    "yearFounded": 1788,
-    "currentPopulation": 30458,
-    "averageRainfall": 21,
-    "events" : [
-      "March 4: March to the Drum of Donuts",
-      "September 5 - 11: Founder Days",
-      "December 1 - 26: Christmas in the Heart"
-    ]
-  },
-  {
-    "name": "Fish Haven",
-    "motto": "This is Fish Heaven.",
-    "yearFounded": 1864,
-    "currentPopulation": 501,
-    "averageRainfall": 14.20,
-    "events" : [
-      "April 1: How Big Was That Fish Day",
-      "May 15-30: Rush the Creek Days",
-      "July 24: Bear Lake Blunder Run",
-      "December 12: Light the Tree"
-    ]
-  },
-  {
-    "name": "Greenville",
-    "motto": "Green is our way of life.",
-    "yearFounded": 1805,
-    "currentPopulation": 33458,
-    "averageRainfall": 25,
-    "events" : [
-      "February 10-12: Greenbration",
-      "May 8 - 18: Greenville Founder Days",
-      "June 20: Verde and Valiant Day",
-      "November 15-16: Greensome Gathering"
-    ]
-  },
-  {
-    "name": "Placerton",
-    "motto": "Positive Placement in Placerton.",
-    "yearFounded": 1946,
-    "currentPopulation": 512,
-    "averageRainfall": 39,
-    "events" : [
-      "July 4: A Blaze of Glory",
-      "October 20: Fall through Fall"
-    ]
-  },
-  {
-    "name": "Preston",
-    "motto": "Home of Napoleon Dynamite",
-    "yearFounded": 1866,
-    "currentPopulation": 5204,
-    "averageRainfall": 16.65,
-    "events" : [
-      "March 29: Work Creek Revival",
-      "July 8-12: Napoleon Dynamite Festival",
-      "November 2-4: Freedom Days"
-    ]
-  },
-  {
-    "name": "Soda Springs",
-    "motto": "Historic Oregon Trail Oasis. The Soda is on Us",
-    "yearFounded": 1858,
-    "currentPopulation": 2985,
-    "averageRainfall": 15.75,
-    "events" : [
-      "February 29: Geyser Song Day",
-      "May 1-6: Days of May Celebration",
-      "October 15-16: Octoberfest"
-    ]
-  },
-  {
-    "name": "Springfield",
-    "motto": "Where everyone is lifted.",
-    "yearFounded": 1826,
-    "currentPopulation": 17852,
-    "averageRainfall": 17,
-    "events" : [
-      "January 8: Spring into Winter",
-      "April 10-20: Celebration of Life",
-      "July 31-Aug 15: Dog Days of Summer Festival"
-    ]
-  }
- ]
-}
-      </script>
+<script>
+    // Variable to use later to store the json data into
+    var townJsonData;
+
+    // URL where the json data is being stored
+    const URL = "https://lukelucas001.github.io/assignments/lesson-9/scripts/data.json";
+
+    // Create a XMLhttpRequest(web request) object
+    var webRequest = new XMLHttpRequest();
+
+    // Setup the specification of the web request
+    webRequest.open("GET", URL, true);
+
+    // Define what type of data you want to get from the request
+    webRequest.responseType = "json";
+
+    // Now make the actual request (send it off)
+    webRequest.send();
+
+    // Request has finished
+    webRequest.onload = function () {
+        // ".response" is part of the webRequest object
+        // by default whatever was returned from the url
+        // is set inside the response.
+        // webRequest is is your object and .response is the key value
+        // note: you dont have to use JSON.parse() function because in your
+        // web request you specifically said you want JSON data back and so
+        // by default the web request will already format it for you. if you
+        // only requested for text back than you would have to format it into
+        // json.
+
+        // set the towns array equal to the townJsonData variable
+        townJsonData = webRequest.response.towns;
+
+        // Now that your townJsonData has all the json data you can successfully use it to input
+        // data into your html.
+
+        // get the Preston town object from the list of towns by calling the getTownByName //function.
+        var prestonTownData = getTownByName("preston");
+        document.getElementById("prestonMotto").innerText = " " + prestonTownData.motto;
+        document.getElementById("prestonYearFound").innerText = " " + prestonTownData.yearFounded;
+        document.getElementById("prestonPopulation").innerText = " " + prestonTownData.currentPopulation;
+        document.getElementById("prestonRainFall").innerText = " " + prestonTownData.averageRainfall;
+        var sodaSpringsData = getTownByName("soda Springs");
+        document.getElementById("sodaSpringsMotto").innerText = " " + sodaSpringsTownData.motto;
+        document.getElementById("sodaSpringsYearFound").innerText = " " + sodaSpringsTownData.yearFounded;
+        document.getElementById("sodaSpringsPopulation").innerText = " " + sodaSpringsTownData.currentPopulation;
+        document.getElementById("sodaSpringsRainFall").innerText = " " + sodaSpringsTownData.averageRainfall;
+        var fishHavenData = getTownByName("fish Haven");
+        document.getElementById("fishHavenMotto").innerText = " " + fishHavenTownData.motto;
+        document.getElementById("fishHavenYearFound").innerText = " " + fishHavenTownData.yearFounded;
+        document.getElementById("fishHavenPopulation").innerText = " " + fishHavenTownData.currentPopulation;
+        document.getElementById("fishHavenRainFall").innerText = " " + fishHavenTownData.averageRainfall;
+    };
+
+    // this is a generic function that will return the data specific to the town name that is
+    // passed in as a parameter.
+    function getTownByName(townName) {
+
+// this for loop will search the array to find the key value that is equal to the parameter passed in.
+        for (index in townJsonData) {
+            if (townJsonData[index].name.toUpperCase() === townName.toUpperCase()) {
+                return townJsonData[index];
+            }
+        }
+// else no town matches the name in the paramter
+    }
+</script>
+
 </body>
 
 </html>

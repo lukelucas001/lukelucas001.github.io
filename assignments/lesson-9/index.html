@@ -84,7 +84,7 @@
                                 <br>
                                 <b>Population:</b><span id="fishHavenPopulation"></span>
                                 <br>
-                                <b>Annual Rainfall:</b><span id="fishHavenainFall"></span>
+                                <b>Annual Rainfall:</b><span id="fishHavenRainFall"></span>
                             </p>
                     </div>
                     <div class="column">
@@ -146,12 +146,12 @@
         document.getElementById("prestonYearFound").innerText = " " + prestonTownData.yearFounded;
         document.getElementById("prestonPopulation").innerText = " " + prestonTownData.currentPopulation;
         document.getElementById("prestonRainFall").innerText = " " + prestonTownData.averageRainfall;
-        var sodaSpringsData = getTownByName("soda Springs");
+        var sodaSpringsTownData = getTownByName("soda Springs");
         document.getElementById("sodaSpringsMotto").innerText = " " + sodaSpringsTownData.motto;
         document.getElementById("sodaSpringsYearFound").innerText = " " + sodaSpringsTownData.yearFounded;
         document.getElementById("sodaSpringsPopulation").innerText = " " + sodaSpringsTownData.currentPopulation;
         document.getElementById("sodaSpringsRainFall").innerText = " " + sodaSpringsTownData.averageRainfall;
-        var fishHavenData = getTownByName("fish Haven");
+        var fishHavenTownData = getTownByName("fish Haven");
         document.getElementById("fishHavenMotto").innerText = " " + fishHavenTownData.motto;
         document.getElementById("fishHavenYearFound").innerText = " " + fishHavenTownData.yearFounded;
         document.getElementById("fishHavenPopulation").innerText = " " + fishHavenTownData.currentPopulation;

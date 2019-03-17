@@ -1,19 +1,20 @@
 let WeatherArray = [];
 var weather;
-const URL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=d18c2ca419b1a2b342fcf01acd72c780&units=imperial";
-var webRequest = new XMLHttpRequest();
-webRequest.open("GET", URL, true);
-webRequest.responseType= "json";
-webRequest.send();
-webRequest.onload = function() {
-    weather = webRequest.response.wind;
+const weatherURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=d18c2ca419b1a2b342fcf01acd72c780&units=imperial";
+var weatherRequest = new XMLHttpRequest();
+weatherRequest.open("GET", weatherURL, true);
+weatherRequest.responseType = "json";
+weatherRequest.send();
+weatherRequest.onload = function() {
+var windData = weatherRequest.response.wind;
 
-    var weatherSummary = getWeatherData
-    document.getElementById("currentTemp").innerText = " " + getWeatherData.currentTemp;
-    document.getElementById("highTemp").innerText = " " + getWeatherData.highTemp;
-    document.getElementById("windChill").innerText = " " + getWeatherData.windChill;
-    document.getElementById("humidity").innerText = " " + getWeatherData.humidity;
-    document.getElementById("windSpeed").innerText = " " + getWeatherData.windSpeed;
+    document.getElementById("windSpeed").innerText = " " + windData.speed;
+
+var mainData = weatherRequest.response.main;
+
+    document.getElementById("currentTemp").innerText = " " + mainData.temp;
+    document.getElementById("highTemp").innerText = " " + mainData.temp_max;
+    document.getElementById("humidity").innerText = " " + mainData.humidity;
     
 };
 function getWeatherData(weatherData) {

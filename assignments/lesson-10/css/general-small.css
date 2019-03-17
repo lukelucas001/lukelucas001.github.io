@@ -1,0 +1,61 @@
+@media only screen and (max-width: 600px) {
+      h1 {
+            font-size: 1.8rem;
+      }
+      
+      h2 {
+            text-align: center;
+            font-size: 1.4rem;
+            text-shadow: 3px 3px 5px #777;
+      }
+      
+      #weatherConditions {
+            display: none;
+      }
+      
+      /* Navigation  */
+      nav {
+            text-align: center;
+            background-color: lightblue;
+      }
+
+      ul {
+            padding-left: 0px;
+            list-style: none;
+      }
+
+      nav ul li a {
+            text-decoration: none;
+
+      }
+
+      #menu:hover {
+            cursor: pointer;
+      }
+
+      .topnav a.icon {
+            display: block;
+      }
+
+      .topnav {
+            background-color: none;
+            text-align: center;
+      }
+
+      .topnav a {
+            display: block;
+            color: black;
+            padding: 10px 0px 10px 10px;
+            text-decoration: none;
+            font-size: 1em;
+            align-content: center;
+      }
+
+      .topnav a:hover {
+            background-color: white;
+      }
+
+      .hiddenLink {
+            display: none !important;
+      }
+}

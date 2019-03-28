@@ -21,43 +21,40 @@ webRequest.onload = function() {
 
 function populateForecastTable() {
       document.getElementById("dayOne").innerText = getWeatherDate(forecastArray[0].dt_txt);
-      document.getElementById("dayOneIcon").src = findWeatherType(forecastArray[0].weather[0].description);
+      document.getElementById("dayOneIcon").src = findWeatherType(forecastArray[0].weather[0].main);
       document.getElementById("dayOneTemp").innerText = forecastArray[0].main.temp;
 
       document.getElementById("dayTwo").innerText = getWeatherDate(forecastArray[1].dt_txt);
-      document.getElementById("dayTwoIcon").src = findWeatherType(forecastArray[1].weather[0].description);
+      document.getElementById("dayTwoIcon").src = findWeatherType(forecastArray[1].weather[0].main);
       document.getElementById("dayTwoTemp").innerText = forecastArray[1].main.temp;
 
       document.getElementById("dayThree").innerText = getWeatherDate(forecastArray[2].dt_txt);
-      document.getElementById("dayThreeIcon").src = findWeatherType(forecastArray[2].weather[0].description);
+      document.getElementById("dayThreeIcon").src = findWeatherType(forecastArray[2].weather[0].main);
       document.getElementById("dayThreeTemp").innerText = forecastArray[2].main.temp;
 
       document.getElementById("dayFour").innerText = getWeatherDate(forecastArray[3].dt_txt);
-      document.getElementById("dayFourIcon").src = findWeatherType(forecastArray[3].weather[0].description);
+      document.getElementById("dayFourIcon").src = findWeatherType(forecastArray[3].weather[0].main);
       document.getElementById("dayFourTemp").innerText = forecastArray[3].main.temp;
 
       document.getElementById("dayFive").innerText = getWeatherDate(forecastArray[4].dt_txt);
-      document.getElementById("dayFiveIcon").src = findWeatherType(forecastArray[4].weather[0].description);
+      document.getElementById("dayFiveIcon").src = findWeatherType(forecastArray[4].weather[0].main);
       document.getElementById("dayFiveTemp").innerText = forecastArray[4].main.temp;
 }
 
 
-function findWeatherType(weatherCondition) {
-
-      if (weatherCondition === "clear sky") {
+function findWeatherType(condition) {
+let weatherCondition = condition.toLowerCase();
+      if (weatherCondition === "clear") {
             return "https://openweathermap.org/img/w/01d.png";
       }
-      else if (weatherCondition === "few clouds") {
+      else if (weatherCondition === "clouds") {
             return "https://openweathermap.org/img/w/02d.png";
       }
-      else if (weatherCondition === "scattered clouds") {
-            return "https://openweathermap.org/img/w/03d.png";
-      }
-      else if (weatherCondition === "broken clouds") {
-            return "https://openweathermap.org/img/w/04d.png";
-      }
-      else if (weatherCondition === "shower rain") {
+      else if (weatherCondition === "drizzle") {
             return "https://openweathermap.org/img/w/09d.png";
+      }
+      else if (badWeatherList.includes(weatherCondition)) {
+            return "https://openweathermap.org/img/w/50d.png";
       }
       else if (weatherCondition === "rain") {
             return "https://openweathermap.org/img/w/10d.png";
@@ -68,14 +65,11 @@ function findWeatherType(weatherCondition) {
       else if (weatherCondition === "snow") {
             return "https://openweathermap.org/img/w/13d.png";
       }
-      else if (weatherCondition === "mist") {
-            return "https://openweathermap.org/img/w/50d.png";
-      }
       else {
             return "";
       }
 }
-
+var badWeatherList =["mist", "smoke", "haze", "dust", "fog", "sand", "ash", "squall", "tornado"];
 function getWeatherDate(timeStamp) {
       let date = new Date(timeStamp);
       let day = date.getDay();

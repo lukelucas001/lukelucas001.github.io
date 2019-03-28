@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Town of Weather</title>
+    <meta name="description" content="Town of Weather, Weather webpage">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/general-main.css">
+    <link rel="stylesheet" href="css/general-small.css">
+    <link rel="stylesheet" href="css/general-large.css">
+    <link rel="stylesheet" href="css/preston-small-6.css">
+    <link rel="stylesheet" href="css/preston-large-6.css">
+    <link rel="stylesheet" href="css/preston-main.css">
+</head>
+
+<body>
+    <header>
+        <div class="headerContent">
+            <div id="sunImage">
+                <img src="images/sunimage.png" alt="Sun Logo" id="headerimg">
+            </div>
+            <div>
+                <h1 class="headerTitle">Town of Weather</h1>
+                <div class="motto">
+                    <h3>Weather for all Occasions</h3>
+                </div>
+            </div>
+            <div id="weatherConditions">
+                <p>Weather<br>Conditions</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a id="menu" class="icon expand">
+                <i class="fa fa-bars"></i> Menu
+            </a>
+            <a class="menuLinks hiddenLink" href="preston-10.html">Preston</a>
+            <a class="menuLinks hiddenLink" href="sodasprings.html">Soda Springs</a>
+            <a class="menuLinks hiddenLink" href="fishhaven.html">Fish Haven</a>
+            <a class="menuLinks hiddenLink" href="stormcenter-10.html">Storm Center</a>
+            <a class="menuLinks hiddenLink" href="gallery-10.html">Gallery</a>
+        </div>
+    </nav>
+    <main>
+        <h1 id="townHeader">Fish Haven</h1>
+        <div class="weatherSummary">
+            <div class="herodiv">
+                <img class="skyImage" src="images/cit-230.jpeg" alt="Morning Country Land">
+                <div class="weatherValues">
+                    <h3><u>Weather Summary</u></h3>
+                    <p>Currently: <span id="currentTemp"></span></p>
+                    <p>High: <span id="highTemp"></span></p>
+                    <p>Wind Chill: <span id="windChill"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>
+                    <p>Wind Speed: <span id="windSpeed"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="forcast">
+                <div class="centerText">
+                      <h3>5 Day Forcast</h3>
+                </div>
+                <div id="forcastTable">
+                      <table>
+                            <tr id="forecastTableHeader">
+                                  <th id="dayOne">dayOne</th>
+                                  <th id="dayTwo">dayTwo</th>
+                                  <th id="dayThree">dayThree</th>
+                                  <th id="dayFour">dayFour</th>
+                                  <th id="dayFive">dayFive</th>
+                            </tr>
+                            <tr id="forecastTableBody" class="text-center">
+                                  <td>
+                                        <i><img id="dayOneIcon" src=""></i>
+                                        <p><span id="dayOneTemp">00</span>&#8457;</p>
+                                  </td>
+                                  <td>
+                                        <i><img id="dayTwoIcon" src=""></i>
+                                        <p><span id="dayTwoTemp">00</span>&#8457;</p>
+                                  </td>
+                                  <td>
+                                        <i><img id="dayThreeIcon" src=""></i>
+                                        <p><span id="dayThreeTemp">00</span>&#8457;</p>
+                                  </td>
+                                  <td>
+                                        <i><img id="dayFourIcon" src=""></i>
+                                        <p><span id="dayFourTemp">00</span>&#8457;</p>
+                                  </td>
+                                  <td>
+                                        <i><img id="dayFiveIcon" src=""></i>
+                                        <p><span id="dayFiveTemp">00</span>&#8457;</p>
+                                  </td>
+                            </tr>
+                      </table>
+                </div>
+          </div>
+    
+    
+
+        <article>
+            <h2>Life in Fish Haven</h2>
+            <h3 id="authorHeader">by Jane Monroe</h3>
+            <section class="articleContent">
+<p>Fish Haven is home to the best fish on earth, well atleast fresh water fish. As a residence of this community
+    I find it busy during the fall with fishermans wanting to enjoy the abundance of fish and enjoy the time out on the water.
+    Tourists come to town to enjoy the fish as well and just to get away from home.
+</p>
+                <img src="images/fall-mountain.jpg" alt="Fall Mountain with Early Snowfall" id="fall-mountain">
+            </section>
+        </article>
+    </main>
+    <footer>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="271" height="265" id="gmap_canvas" src="https://maps.google.com/maps?q=fish%20Haven&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Werbung: <a href="https://www.jetzt-drucken-lassen.de">jetzt-drucken-lassen.de</a></div><style>.mapouter{position:relative;text-align:right;height:265px;width:271px;}.gmap_canvas {overflow:hidden;background:none!important;height:265px;width:271px;}</style></div>
+        <span id="currentDate"></span>
+    </footer>
+
+    <!--JQUERY LIBRARY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/forecastapi.js"></script>
+    <script src="scripts/weatherapi.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+
+</html>
